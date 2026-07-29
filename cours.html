@@ -155,142 +155,23 @@
   }
 }
 
-/* === Fenêtre d'accueil === */
-.intro-screen {
-  position: fixed;
-  top:0;left:0;width:100%;height:100%;
-  background: linear-gradient(135deg,#007bff,#00b4d8);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:2000;
-  text-align:center;
-  transition: opacity .6s ease, visibility .6s ease;
-}
-.intro-content {max-width:600px;padding:20px;}
-.intro-photo {
-  width:150px;height:150px;
-  border-radius:50%;
-  border:4px solid #fff;
-  margin-bottom:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,.3);
-}
-.brand {color:#ffdd57;font-weight:700;}
-#enter-site.btn-primary {
-  background:#ffdd57;
-  color:#333;
-  border:none;
-  padding:12px 30px;
-  font-size:1.2rem;
-  border-radius:8px;
-  cursor:pointer;
-}
-.intro-screen.hide {
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-}
-
-/* === NAVIGATION === */
-.navbar {
-  position:sticky;top:0;
-  background:#fff;
-  border-bottom:3px solid #007bff;
-  z-index:1000;
-}
-.nav-container {
-  max-width:1100px;
-  margin:0 auto;
-  padding:10px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-}
-.nav-logo {
-  font-weight:700;
-  font-size:1.3rem;
-  color:#007bff;
-  text-decoration:none;
-}
-.nav-search input {
-  padding:6px 10px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  width:180px;
-}
-.nav-links {
-  list-style:none;
-  display:flex;
-  gap:15px;
-  margin:0;
-  padding:0;
-}
-.nav-links a {
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
-  padding:6px 10px;
-  border-radius:6px;
-  transition:0.3s;
-}
-.nav-links a:hover {
-  background:#007bff;
-  color:#fff;
-}
-.btn-pay {
-  background:#ffdd57;
-  color:#333;
-  padding:8px 14px;
-  border-radius:8px;
-  font-weight:700;
-  text-decoration:none;
-  transition:0.3s;
-}
-.btn-pay:hover {background:#ffe680;}
-.nav-toggle {
-  display:none;
-  font-size:1.8rem;
-  cursor:pointer;
-  color:#007bff;
-}
-
-/* Responsive */
-@media(max-width:768px){
-  .nav-links {
-    position:absolute;
-    top:60px;
-    right:0;
-    background:#fff;
-    flex-direction:column;
-    width:200px;
-    border-left:3px solid #007bff;
-    padding:15px 0;
-    display:none;
-  }
-  .nav-links.show {display:flex;}
-  .nav-search {display:none;}
-  .nav-toggle {display:block;}
-}
-
-.btn-pay {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #00b875; /* vert Wave */
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
-}
-.btn-pay:hover {
-  background-color: #009e63;
-}
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
  </style>
 </head>
 <body>
+
+
+  
 
      
 <!-- === En-tête Amélioré === -->
@@ -312,289 +193,26 @@
   </div>
 </header>
 
-  <!-- === MENU NAVIGATION AMÉLIORÉ === -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#accueil" class="nav-logo">🚀 Gi.Code</a>
-    <ul class="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#word">Word</a></li>
-      <li><a href="#excel">Excel</a></li>
-      <li><a href="#powerpoint">PowerPoint</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#js">JavaScript</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-toggle" id="nav-toggle">☰</div>
-  </div>
-</nav>
 
+<section class="cours-section">
+    <h2>📚 Cours disponibles</h2>
 
-<header class=bandeau-accueil>
-<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/64px-Flag_of_Senegal.png alt="Drapeau du Sénégal" class=drapeau>
-<div class=texte-accueil>
-
-<h1>📚 Gi. Code-Bureautique et Developpement WEB – Sénégal</h1>
-<p>Des cours payants-interactifs pour maîtriser Word, Excel, PowerPoint et pour la création de sites webs interactifs, de logiciels etc</p>
-</div>
-<img src=logo.jpg alt="Gi. Code" class=logo-bureau>
-</header>
-<section class=cours-section>
-<h2>
-📚 Cours disponibles
-<img src=logo.jpg alt="Drapeau du Sénégal" width=32 style=vertical-align:middle;margin-left:8px>
-</h2>
-
-
-<!-- === Fenêtre d'Accueil === -->
-<div id="intro-screen" class="intro-screen">
-  <div class="intro-content">
-    <img src="images Gi. Code.jpg" alt="Photo de Mansour" class="intro-photo">
-    <h1>Bienvenue sur <span class="brand">Gi.Code Bureautique</span></h1>
-    <p>Formations Word, Excel, PowerPoint & Développement Web</p>
-    <button id="enter-site" class="btn-primary">🚀 Entrer sur le site</button>
-  </div>
-</div>
-
-<!-- === Barre de Navigation === -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#accueil" class="nav-logo">Gi.Code</a>
-
-    <!-- Barre de recherche -->
-    <form class="nav-search" onsubmit="return false;">
-      <input type="text" id="searchInput" placeholder="Rechercher un cours…">
-    </form>
-
-    <ul class="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#word">Word</a></li>
-      <li><a href="#excel">Excel</a></li>
-      <li><a href="#powerpoint">PowerPoint</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#js">JavaScript</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <!-- Bouton Payer -->
-    <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000"
-       target="_blank" class="btn-pay">💳 Payer</a>
-
-    <div class="nav-toggle" id="nav-toggle">☰</div>
-  </div>
-</nav>
-
-<div class=cours-container>
-<div class=carte-cours>
-<h3>💻 Word</h3>
-<p>Maîtrisez la mise en forme de documents professionnels.</p>
-<a href=word.html class=btn-principal>Voir les Cours</a>
-<ul>
-<li><a href="Gi. Code Cours Word 1 Présentation.pdf" class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="Gi. Code Cours 2 Word.pdf" download class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="Gi. Code Cours 3 Word.pdf" class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="Gi. Code Cours Word 4 & 5.pdf" class=btn-secondaire>📥 Télécharger cours 4 & 5</a></li>
-<li><a href="Gi. Code Cours Word 6 & 7 & 8.pdf" class=btn-secondaire>📥 Télécharger cours 6 & 7 & 8</a></li>
-<li><a href="Gi. Code Cours Word 9.pdf" class=btn-secondaire>📥 Télécharger cours 9</a></li>
-</ul>
-</div>
-<div class=carte-cours>
-<h3>📊 Excel</h3>
-<p>Créez des tableaux dynamiques et utilisez des formules.</p>
-<a href=excel.html class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="Gi. Code Cours Excel Presentation.pdf" download class=btn-secondaire>📥 Télécharger cours Présentation </a></li>
-<li><a href="Skill 1 Excel.pdf" download class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="Skill 2 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="Skill 3 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="Skill 4 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 4</a></li>
-<li><a href="Skill 5 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 5</a></li>
-<li><a href="Skill 6 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 6</a></li>
-<li><a href="Skill 7 Excel.pdf" class=btn-secondaire>📥 Télécharger cours 7</a></li>
-</ul>
-</div>
-<div class=carte-cours>
-<h3>📽 PowerPoint</h3>
-<p>Concevez des présentations modernes et efficaces.</p>
-<a href=powerpoint.html class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="Gi. Code Cours 1 PowerPoint.pdf" download class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="Gi. Code Cours 2 PowerPoint.pdf" download class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="Gi. Code Cours PowerPoint 3.pdf" class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="Gi. Code Cours PowerPoint 4.pdf" class=btn-secondaire>📥 Télécharger cours 4</a></li>
-<li><a href="Gi. Code Cours PowerPoint 5.pdf" class=btn-secondaire>📥 Télécharger cours 5</a></li>
-<li><a href="Gi. Code Cours PowerPoint 6.pdf" class=btn-secondaire>📥 Télécharger cours 6</a></li>
-</ul>
-</div>
-
-<div class=carte-cours>
-<h3>📊 HTML</h3>
-<p>Créez la structure de pages web, des formulaires interactifs....</p>
-<a href=cours.html class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="HTML Présentation." download class=btn-secondaire>📥 Télécharger cours Présentation </a></li>
-<li><a href="HTML 1.pdf" download class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="HTML 2 ." class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="HTML 3 ." class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="HTML 4 ." class=btn-secondaire>📥 Télécharger cours 4</a></li>
-<li><a href="HTML 5 ." class=btn-secondaire>📥 Télécharger cours 5</a></li>
-<li><a href="HTML 6 ." class=btn-secondaire>📥 Télécharger cours 6</a></li>
-<li><a href="HTML 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
-</ul>
-</div>
-
-<div class=carte-cours>
-<h3>📊 CSS</h3>
-<p>Styliser les pages web .</p>
-<a href=cours.css class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="CSS Présentation.pdf" class=btn-secondaire>📥 Télécharger cours Présentation </a></li>
-<li><a href="CSS 1.pdf" class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="CSS 2 ." class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="CSS 3 ." class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="CSS 4 ." class=btn-secondaire>📥 Télécharger cours 4</a></li>
-<li><a href="CSS 5 ." class=btn-secondaire>📥 Télécharger cours 5</a></li>
-<li><a href="CSS 6 ." class=btn-secondaire>📥 Télécharger cours 6</a></li>
-<li><a href="CSS 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
-</ul>
-</div>
-
-<div class=carte-cours>
-<h3>📊 Flexbox</h3>
-<p>Styliser les pages web</p>
-<a href=cours.flexbox class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="flexbox 1" class=btn-secondaire> </a>📥 Télécharger cours 1</li>
-<li><a href="flexbox 1.pdf" class=btn-secondaire>📥 Télécharger cours 1</a></li>
- <li><a href="flexbox 1." class=btn-secondaire>📥 Télécharger cours 2</a></li>
- <li><a href="flexbox 3." class=btn-secondaire>📥 Télécharger cours 3</a></li>
- <li><a href="flexbox 4 ." class=btn-secondaire>📥 Télécharger cours 4</a></li>
- <li><a href="flexbox 5 ." class=btn-secondaire>📥 Télécharger cours 5</a></li>
- <li><a href="flexbox 6 ." class=btn-secondaire>📥 Télécharger cours 6</a></li>
- <li><a href="flexbox 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
- </ul>
- </div>
-
- <div class=carte-cours>
-<h3>📊 Algorithme</h3>
-<p>Développez la logique de la programmation</p>
-<a href=cours.algo class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="Algo 1" class=btn-secondaire> </a>📥 Télécharger cours 1</li>
-<li><a href="Algo 1.pdf" class=btn-secondaire>📥 Télécharger cours 1</a></li>
- <li><a href="Algo 2." class=btn-secondaire>📥 Télécharger cours 2</a></li>
- <li><a href="Algo 3." class=btn-secondaire>📥 Télécharger cours 3</a></li>
- <li><a href="Algo 4 ." class=btn-secondaire>📥 Télécharger cours 4</a></li>
- <li><a href="Algo 5 ." class=btn-secondaire>📥 Télécharger cours 5</a></li>
- <li><a href="Algo 6 ." class=btn-secondaire>📥 Télécharger cours 6</a></li>
- <li><a href="Algo 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
- </ul>
- </div>
-
-<div class=carte-cours>
-<h3>📊 JavaScript</h3>
-<p>Rendez interactifs les pages web, ajoutez du code, </p>
-<a href=cours.js class=btn-principal>Voir les leçons</a>
-<ul>
-<li><a href="js Présentation.pdf" download class=btn-secondaire>📥 Télécharger cours Présentation </a></li>
-<li><a href="js 1.pdf" download class=btn-secondaire>📥 Télécharger cours 1</a></li>
-<li><a href="js 2 ." class=btn-secondaire>📥 Télécharger cours 2</a></li>
-<li><a href="js 3 ." class=btn-secondaire>📥 Télécharger cours 3</a></li>
-<li><a href="js 4 ." class=btn-secondaire>📥 Télécharger cours 4</a></li>
-<li><a href="js 5 ." class=btn-secondaire>📥 Télécharger cours 5</a></li>
-<li><a href="js 6 ." class=btn-secondaire>📥 Télécharger cours 6</a></li>
-<li><a href="js 7 ." class=btn-secondaire>📥 Télécharger cours 7</a></li>
-</ul>
-</div>
-
-</div>
+    <div id="listeCours" class="cours-container"></div>
 </section>
+  
 
-    <!-- === FACEBOOK PLUGINS === -->
-<h2 style="text-align:center;">💬 Partage et Commentaires Facebook</h2>
-
-<!-- Bouton J'aime et Partager -->
-<div class="fb-like"
-     data-href="https://g-mansour1977.github.io/Les-COURS-de-Gi.-Code/"
-     data-width=""
-     data-layout="standard"
-     data-action="like"
-     data-size="large"
-     data-share="true">
-</div>
-
-<hr style="margin:20px 0;">
-
-<!-- Zone de commentaires -->
-<div class="fb-comments"
-     data-href="https://g-mansour1977.github.io/Les-COURS-de-Gi.-Code/"
-     data-width="100%"
-     data-numposts="5">
-</div>
-
-<!-- SDK Facebook (à placer juste avant </body>) -->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-  src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v23.0&appId=1498839574651232">
-</script>
-
-<!-- Style pour centrer le plugin -->
-<style>
-  .fb-comments, .fb-like {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  h2 {
-    font-family: Arial, sans-serif;
-    color: #1877f2;
-    font-weight: 600;
-  }
-</style>
-
+ 
 
 <footer style=text-align:center;padding:20px;background:#f0f0f0;margin-top:2rem>
 <p>📞 Contactez-nous au : <a href=tel:+221776813749>77 681 37 49</a></p>
 <p>📧 Email : <a href=mailto:gmansour1977@gmail.com>gmansour1977@gmail.com</a></p>
 <a href="https://pay.wave.com/m/M_sn_VPYlAUnvz263/c/sn/?amount=7000" target=_blank style="display:inline-block;padding:12px 20px;background-color:#09f;color:#fff;text-decoration:none;font-weight:700;border-radius:6px">
-💳 Payer avec Wave – #7000# FCFA. Accédez à une Formation complète.
+💳 Payer avec Wave – #15000# FCFA. Accédez à une Formation complète.
 </a>
+<a href=""></a>
 </footer>
 
-<script>
-  // Fenêtre d'accueil
-  const intro = document.getElementById('intro-screen');
-  const enterBtn = document.getElementById('enter-site');
-  enterBtn.addEventListener('click', () => {
-    intro.classList.add('hide');
-  });
-
-  // Menu mobile
-  const toggle = document.getElementById('nav-toggle');
-  const links = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => links.classList.toggle('show'));
-
-  // Recherche simple (scroll vers un cours)
-  const searchInput = document.getElementById('searchInput');
-  searchInput.addEventListener('keyup', e => {
-    if (e.key === 'Enter') {
-      const value = e.target.value.toLowerCase();
-      if (value.includes('word')) location.hash = '#word';
-      else if (value.includes('excel')) location.hash = '#excel';
-      else if (value.includes('power')) location.hash = '#powerpoint';
-      else if (value.includes('html')) location.hash = '#html';
-      else if (value.includes('css')) location.hash = '#css';
-      else if (value.includes('js')) location.hash = '#js';
-      else alert('Cours non trouvé');
-      e.target.value = '';
-    }
-  });
-</script>
-
-
+<script src="js/cours.js"></script>
 </body>
 </html>
 
