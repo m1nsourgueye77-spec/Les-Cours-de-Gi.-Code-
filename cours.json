@@ -1,0 +1,84 @@
+[
+  {
+    "icone": "💻",
+    "titre": "Word",
+    "description": "Maîtrisez la mise en forme de documents professionnels.",
+    "page": "word.html",
+    "cours": [
+      {
+        "nom": "Cours 1",
+        "pdf": "Gi. Code Cours Word 1 Présentation.pdf"
+      },
+      {
+        "nom": "Cours 2",
+        "pdf": "Gi. Code Cours 2 Word.pdf"
+      },
+      {
+        "nom": "Cours 3",
+        "pdf": "Gi. Code Cours 3 Word.pdf"
+      },
+      {
+      "nom": "Cours 4 & 5",
+        "pdf": "Gi. Code Cours Word 4 & 5.pdf"
+      },
+      {
+      "nom": "Cours 6 & 7 & 8",
+        "pdf": "Gi. Code Cours Word 6 & 7 & 8.pdf"
+      },
+      {
+      "nom": "Cours 9",
+        "pdf": "Gi. Code Cours Word 9.pdf"
+      }
+
+    ]
+  },
+  {
+    "icone": "📊",
+    "titre": "Excel",
+    "description": "Créez des tableaux dynamiques.",
+    "page": "excel.html",
+    "cours": [
+      {
+        "nom": "Présentation",
+        "pdf": "Gi. Code Cours Excel Presentation.pdf"
+      },
+      {
+        "nom": "Skill 1",
+        "pdf": "Skill 1 Excel.pdf"
+      },
+      {
+
+      "nom": "Skill 2",
+        "pdf": "Skill 2 Excel.pdf"
+      },
+      {
+
+        "nom": "Skill 3",
+        "pdf": "Skill 3 Excel.pdf"
+        },
+        {
+
+          "nom": "Skill 4",
+        "pdf": "Skill 4 Excel.pdf"
+        },
+        {
+
+          "nom": "Skill 5",
+        "pdf": "Skill 5 Excel.pdf"
+        },
+        {
+
+          "nom": "Skill 6",
+        "pdf": "Skill 6 Excel.pdf"
+        },
+        {
+
+          "nom": "Skill 7",
+        "pdf": "Skill 7 Excel.pdf"
+        }
+        
+        
+
+    ]
+  }
+]
