@@ -32,6 +32,8 @@
 
     ]
   },
+
+  
   {
     "icone": "📊",
     "titre": "Excel",
@@ -80,5 +82,51 @@
         
 
     ]
+  },
+
+
+  {
+    "icone": "📽",
+    "titre": "PowerPoint<",
+    "description": "oncevez des présentations modernes et efficaces.",
+    "page": "powerpoint.html",
+    "cours": [
+      {
+        "nom": "Présentation",
+        "pdf": "Gi. Code Cours 1 PowerPoint.pdf"
+      },
+      {
+        "nom": "",
+        "pdf": ""
+      },
+      {
+
+      "nom": "Skill 2",
+        "pdf": "Gi. Code Cours 2 PowerPoint.pdf"
+      },
+      {
+
+        "nom": "Skill 3",
+        "pdf": "Gi. Code Cours 3 PowerPoint.pdf"
+        },
+        {
+
+          "nom": "Skill 4",
+        "pdf": "Gi. Code Cours 4 PowerPoint.pdf"
+        },
+        {
+
+          "nom": "Skill 5",
+        "pdf": "Gi. Code Cours 5 PowerPoint.pdf"
+        },
+        {
+
+          "nom": "Skill 6",
+        "pdf": "Gi. Code Cours  PowerPoint.pdf"
+        }
+        
+        
+    ]
   }
+  
 ]
